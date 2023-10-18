@@ -1,0 +1,63 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Desktop App</title>
+</head>
+<body>
+  <h1>Desktop App</h1>
+  <!-- Create collection form -->
+  <form id="create-collection-form">
+    <!-- Collection name input -->
+    <label for="collection-name">Collection Name:</label>
+    <input type="text" id="collection-name" name="collection-name"><br>
+
+    <!-- Thumbnail input -->
+    <label for="thumbnail-file">Custom Thumbnail:</label>
+    <input type="file" id="thumbnail-file" name="thumbnail-file"><br>
+
+    <!-- Create collection button -->
+    <input type="submit" value="Create Collection">
+  </form>
+
+  <!-- Upload video form -->
+  <form id="upload-video-form">
+    <!-- Collection select dropdown (populate this dynamically) -->
+    <label for="collection-select">Select Collection:</label>
+    <select id="collection-select" name="collection-select"></select><br>
+
+    <!-- Video name input -->
+    <label for="video-name">Video Name:</label>
+    <input type="text" id="video-name" name="video-name"><br>
+
+    <!-- Video file input -->
+    <label for="video-file">Video File:</label>
+    <input type="file" id="video-file" name="video-file"><br>
+
+    <!-- Upload video button -->
+    <input type="submit" value="Upload Video">
+  </form>
+  <script src="renderer.js"></script>
+</body>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script>
+var firebaseConfig = {
+  apiKey: "AIzaSyA3ZwOB8HqeK3XgSqit0MJXmXX76N-W_Xw",
+  authDomain: "vidplay-3db58.firebaseapp.com",
+  databaseURL: "https://vidplay-3db58-default-rtdb.firebaseio.com",
+  projectId: "vidplay-3db58",
+  storageBucket: "vidplay-3db58.appspot.com",
+  messagingSenderId: "1069493163724",
+  appId: "1:1069493163724:web:bc22a51ea975a994585469"
+};
+firebase.initializeApp(firebaseConfig);
+firebase.database();
+
+</script>
+
+</html>
